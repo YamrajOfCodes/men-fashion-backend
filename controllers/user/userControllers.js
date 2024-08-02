@@ -46,6 +46,8 @@ exports.userRegister = async (req, res) => {
 // login
 exports.login = async (req, res) => {
     const {email,password} = req.body;
+    console.log(email,password);
+    
     
     if(!email || !password){
         res.status(400).json({error:"all field require"})
